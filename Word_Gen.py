@@ -28,3 +28,14 @@ def generate_words(word):
 word = input("Enter a root word: ").lower()
 generate_words(word)
 
+'''
+Output:
+Enter a root word: Study
+
+ Generated Word Forms
+ =======================
+Root Word:  study
+Plural form :  studies
+Present Participle:  studying
+Past Tense:  studyed
+'''
