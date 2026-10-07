@@ -9,5 +9,19 @@ for ent in doc.ents:
     print(f"Entity: {ent.text}")
     print(f"Label: {ent.label_}")
     print("-" * 40)
+'''
+Output:
+Enter a sentence: Modi is the prime minister. Sundar Picchai is the CEO of Google. Microsoft is dream company
 
-# Modi is the prime minister. Sundar Picchai is the CEO of Google. Microsoft is dream company
+Named Entities
+----------------------------------------
+Entity: Sundar Picchai
+Label: PERSON
+----------------------------------------
+Entity: Google
+Label: ORG
+----------------------------------------
+Entity: Microsoft
+Label: ORG
+----------------------------------------
+'''
