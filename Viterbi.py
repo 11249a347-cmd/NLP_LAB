@@ -13,4 +13,15 @@ for word, tag in tags:
     print(f"{word:<15} {tag}")
 
 
-# Time flies like an arrow
+'''
+Output:
+Enter a sentence: Time flies like an arrow
+
+ POS Tags using Viterbi Decoding Concept
+---------------------------------------------
+Time            NNP
+flies           NNS
+like            IN
+an              DT
+arrow           NN
+'''
