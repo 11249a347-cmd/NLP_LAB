@@ -11,4 +11,19 @@ print("-"*35)
 for word, tag in tags:
     print(f"{word:<15} {tag}")
 
-# The quick brown fox jumps over the lazy dog
+'''
+Output:
+Enter a sentence: The quick brown fox jumps over the lazy dog
+
+ Part-of-Speech Tags
+-----------------------------------
+The             DT
+quick           JJ
+brown           NN
+fox             NN
+jumps           VBZ
+over            IN
+the             DT
+lazy            JJ
+dog             NN
+'''
