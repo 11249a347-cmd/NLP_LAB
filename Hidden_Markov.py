@@ -28,5 +28,12 @@ print("--------------------")
 
 for word, tag in tagged_words:
     print(f"{word}\t{tag}")
-
-    #Enter a customer message: The customer needs help
+    
+'''Output:
+Enter a customer message: The customer needs help
+Word	POS Tag
+--------------------
+The	DET
+customer	NOUN
+needs	VERB
+help	NOUN'''
