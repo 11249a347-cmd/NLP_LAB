@@ -1,29 +1,41 @@
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk import pos_tag
-text = input("Enter a sentence: ")
+from nltk.metrics import edit_distance
 
-tokens = word_tokenize(text)
-tags = pos_tag(tokens)
-print("\n Part-of-Speech Tags")
-print("-"*35)
+# Read input strings
+str1 = input("Enter the first string: ").lower().strip()
+str2 = input("Enter the second string: ").lower().strip()
 
-for word, tag in tags:
-    print(f"{word:<15} {tag}")
+# Calculate edit distance
+distance = edit_distance(str1, str2)
 
-'''
-Output:
-Enter a sentence: The quick brown fox jumps over the lazy dog
+# Calculate normalized similarity
+max_length = max(len(str1), len(str2))
 
- Part-of-Speech Tags
------------------------------------
-The             DT
-quick           JJ
-brown           NN
-fox             NN
-jumps           VBZ
-over            IN
-the             DT
-lazy            JJ
-dog             NN
-'''
+if max_length == 0:
+    similarity = 1.0
+else:
+    similarity = 1 - (distance / max_length)
+
+# Display results
+print("\nString 1:", str1)
+print("String 2:", str2)
+print("Edit Distance:", distance)
+print("Similarity Score:", round(similarity, 4))
+print("Similarity Percentage:", round(similarity * 100, 2), "%")
+
+# Classify similarity
+if similarity >= 0.80:
+    print("Result: Highly Similar")
+elif similarity >= 0.50:
+    print("Result: Moderately Similar")
+else:
+    print("Result: Less Similar")
+'''output:
+Enter the first string: reset my password
+Enter the second string: reset password
+
+String 1: reset my password
+String 2: reset password
+Edit Distance: 3
+Similarity Score: 0.8235
+Similarity Percentage: 82.35 %
+Result: Highly Similar'''
